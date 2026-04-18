@@ -1,0 +1,147 @@
+:root {
+    --primario: #e74c3c;
+    --oscuro: #1a1a1a;
+    --claro: #f5f5f5;
+    --texto: #333;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    background: #fff;
+    color: var(--texto);
+}
+
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background: var(--oscuro);
+    color: #fff;
+    position: fixed;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.brand span { color: var(--primario); }
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+nav li { margin-bottom: 25px; }
+
+nav a {
+    color: #888;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover { color: var(--primario); padding-left: 10px; }
+
+.main-content {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+}
+
+.hero-split {
+    height: 80vh;
+    background: linear-gradient(to right, rgba(0,0,0,0.8), transparent), url('https://picsum.photos/id/230/1200/800');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    color: #fff;
+}
+
+.hero-text h1 { font-family: 'Oswald'; font-size: 4rem; margin: 0; }
+
+.btn-rojo {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 18px 40px;
+    background: var(--primario);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 50px;
+}
+
+.contenedor { padding: 80px 10%; }
+
+.subtitulo {
+    font-family: 'Oswald';
+    font-size: 2.5rem;
+    border-left: 8px solid var(--primario);
+    padding-left: 20px;
+    margin-bottom: 50px;
+}
+
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    border-radius: 15px;
+}
+
+.item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(transparent, #000);
+    color: #fff;
+}
+
+.item:hover img { transform: scale(1.1); }
+
+.seccion-gris { background: var(--claro); padding: 80px 0; }
+
+.grid-clientes { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+.card-opinion { background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+
+.split-calc { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+
+.calc-form { background: #fff; padding: 40px; border: 1px solid #ddd; border-radius: 20px; }
+
+.input-group { margin-bottom: 25px; }
+
+.input-group.row { display: flex; align-items: center; gap: 15px; }
+
+.input-group label { display: block; font-weight: 800; font-size: 0.8rem; margin-bottom: 10px; }
+
+select { width: 100%; padding: 15px; border: 2px solid var(--claro); border-radius: 10px; }
+
+.total-box {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px dashed #ddd;
+    text-align: center;
+}
+
+.label-total { display: block; color: #888; font-weight: 700; margin-bottom: 10px; }
+
+#resultado { font-size: 3rem; font-weight: 800; color: var(--primario); }
